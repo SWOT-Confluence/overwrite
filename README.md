@@ -29,10 +29,11 @@ The following is required:
 `data/priors.json` is a sample JSON file with a structure you can follow when generating the priors you would like to overwrite in the SoS. A few things to note:
 
 - Not all priors or groups have been tested so there may be some modifications that are specific to a particular prior.
-- The first dimension of `values` should equal the size of `reach_ids` (in other words there is a value for each reach identifier).
-- If your data is indexed on num_days then make sure to include the days (see `grdc["grdc_q"]`).
-- If your data is indexed on num_nodes then make sure to include the node identifiers (see `gbnode[logr_hat]`).
-- If your data is indexed on num_months or probability there is no need to include those dimensions but make sure they are accounted for in the shape/dimensions of `values`.
+    -  The first dimension of `values` should equal the size of `reach_ids` (in other words there is a value for each reach identifier).
+    - If your data is indexed on num_days then make sure to include the days (see `grdc["grdc_q"]`).
+    - If your data is indexed on num_nodes then make sure to include the node identifiers (see `gbnode[logr_hat]`).
+    - If your data is indexed on num_months or probability there is no need to include those dimensions but make sure they are accounted for in the shape/dimensions of `values`.
+- `data_type` determines what data type the prior should be written to the NetCDF as. Valid values are: `i4` for integer values and `f8` for float values.
 - `run_type` indicates whether you would like to update the constrained or unconstrained version of the SoS. Please only use the values: "constrained" or "unconstrained". If you would like to update both, use two entries.
 
 # execution
