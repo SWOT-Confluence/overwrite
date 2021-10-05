@@ -15,7 +15,7 @@ Note: store.py will be used by most to guide how they store priors that will ove
 # setup
 
 ## store.py
-`store.py` contains example usage and can be executed. Before executing the file you will need to fill out lines 228-233 to match your specific execution of `store.py`.
+`store.py` contains example usage and can be executed. Before executing the file you will need to fill out lines 228-233 to match your specific execution of `store.py`. Or include the data found at those lines in a script of your own.
 
 The following is required:
 - author (your name)
