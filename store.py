@@ -220,11 +220,11 @@ class PriorStore:
 if __name__ == "__main__":
 
     # Required data
-    author = ""
-    email = ""
+    author = ""    # Your name
+    email = ""    # Your email address
     sos_file = ""    # Just the file name (no Path)
-    json_file = Path("")
-    output_dir = Path("")
+    json_file = Path("")    # Path to the JSON file with priors data
+    output_dir = Path("")    # Path where you would like the NetCDF file written to
 
     # Run Operartions to create NetCDF
     store = PriorStore(author, email, sos_file, output_dir)
