@@ -1,0 +1,55 @@
+{
+    "wbm" : {
+        "name": {
+            "values": [],
+            "data_type": "x",
+            "reach_ids": [],
+            "indexes": [],
+            "run_type": "x"
+        }
+    },
+    "grades" : {
+        "name": {
+            "values": [],
+            "data_type": "x",
+            "reach_ids": [],
+            "indexes": [],
+            "run_type": "x"
+        }
+    },
+    "grdc": {
+        "name": {
+            "values": [],
+            "data_type": "x",
+            "reach_ids": [],
+            "indexes": [],
+            "run_type": "x"
+        }
+    },
+    "usgs": {},
+    "gbreach": {
+        "name1": {
+            "values": [],
+            "data_type": "x",
+            "reach_ids": [],
+            "indexes": [],
+            "run_type": "x"
+        },
+        "name2": {
+            "values": [],
+            "data_type": "x",
+            "reach_ids": [],
+            "indexes": [],
+            "run_type": "x"
+        }
+    },
+    "gbnode": {
+        "name": {
+            "values": [],
+            "data_type": "x",
+            "reach_ids": [],
+            "indexes": [],
+            "run_type": "x"
+        }
+    }
+}

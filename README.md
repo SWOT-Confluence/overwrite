@@ -26,14 +26,18 @@ The following is required:
 
 ## priors.json
 
-`data/priors.json` is a sample JSON file with a structure you can follow when generating the priors you would like to overwrite in the SoS. A few things to note:
+`data/priors.json` is a sample JSON file with data and contains a structure you can follow when generating the priors you would like to overwrite in the SoS. A few things to note:
 
 - Not all priors or groups have been tested so there may be some modifications that are specific to a particular prior.
-    -  The first dimension of `values` should equal the size of `reach_ids` (in other words there is a value for each reach identifier).
-    - If your data is indexed on num_days then make sure to include the days (see `grdc["grdc_q"]`).
-    - If your data is indexed on num_nodes then make sure to include the node identifiers (see `gbnode[logr_hat]`).
-    - If your data is indexed on num_months or probability there is no need to include those dimensions but make sure they are accounted for in the shape/dimensions of `values`.
-- `data_type` determines what data type the prior should be written to the NetCDF as. Valid values are: `i4` for integer values and `f8` for float values.
+- `values` are the prior data values.
+    - The first dimension of `values` should equal the size of `reach_ids` (in other words there is a value for each reach identifier).
+    - If your data is indexed on num_days then make sure to include the days in another key labelled `value_t` (see `grdc["grdc_q"]`).
+    - If your data is indexed on num_nodes then make sure to include the node identifiers instead of the reach identifiers (see `gbnode[logr_hat]`).
+    - If your data is indexed on num_months or probability there is no need to include these dimensions but make sure they are accounted for in the shape/dimensions of `values`.
+- `data_type` determines what data type the prior should be written to the NetCDF as. Valid types are: `i4` for integer values and `f8` for float values.
+- `reach_ids` are the reach identifiers for the prior data values.
+- `node_ids` are the node identifiers for the prior data values (applicable to only `gbnode`).
+- `indexes` are the index values or location of the prior data that you would like to overwrite in the SoS.
 - `run_type` indicates whether you would like to update the constrained or unconstrained version of the SoS. Please only use the values: "constrained" or "unconstrained". If you would like to update both, use two entries.
 
 # execution
